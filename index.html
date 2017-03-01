@@ -1,0 +1,30 @@
+<html>
+
+<head>
+
+
+</head>
+
+<body>
+    <canvas id="c"></canvas>
+
+    <script>
+        var c = document.getElementById("c");
+        var ctx = c.getContext("2d");
+
+
+        var map = [[1, 0, 1, 1],
+            [1, 0, 0, 1],
+            [1, 0, 1, 1],
+            [1, 0, 0, 1]]
+        for (var i = 0; i < map.length; i++) {
+            for (var j = 0; j < map[i].length; j++) {
+                if (map[i][j] == 1) {
+                    ctx.fillRect(j * 20, i * 20, 20, 20);
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
